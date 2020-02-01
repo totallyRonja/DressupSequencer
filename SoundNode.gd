@@ -43,12 +43,15 @@ func _on_Area2D_input_event(_viewport, event: InputEvent, _shape_idx):
 				nearest_attach.set_child(self)
 		if !moving && is_dragging:
 			drag_offset = global_position - event.position
+			if get_parent().has_method("loose_child"):
+					get_parent().loose_child()
+			reparent(get_tree().root)
 		moving = is_dragging
 		
 		update()
 		get_tree().set_input_as_handled()
 
-func reparent(parent: Node2D):
+func reparent(parent: Node):
 	var trans = global_transform
 	get_parent().remove_child(self)
 	parent.add_child(self)
