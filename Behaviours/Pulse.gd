@@ -30,5 +30,4 @@ func pulse():
 		var scale = pulseCurve.interpolate(time)
 		$Sprite.scale = Vector2(scale, scale)
 		time += yield()
-		print(time)
 	$Sprite.scale = Vector2(1, 1)

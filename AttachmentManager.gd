@@ -19,7 +19,7 @@ func get_closest(point: Vector2, maxDist: float = 10000.0) -> Node2D:
 	var leastDistance : float = maxDist
 	var closest: Node2D
 	for node in AvailablePoints:
-		var dist : float = (point - closest.position).length()
+		var dist : float = (point - node.global_position).length()
 		if dist < leastDistance:
 			leastDistance = dist
 			closest = node
