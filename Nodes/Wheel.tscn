@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 140.616
 
-[node name="Node2D" type="Node2D"]
+[node name="FerrisWheel" type="Node2D"]
 
 [node name="AttachPoint" parent="." instance=ExtResource( 2 )]
 position = Vector2( 90, 12.5 )

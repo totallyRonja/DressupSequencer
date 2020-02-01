@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60.3953, 125.654 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Pin" type="Node2D"]
 rotation = 1.5708
 
 [node name="AttachPoint" parent="." instance=ExtResource( 2 )]

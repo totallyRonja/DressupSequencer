@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 170.446, 159.366 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Eye" type="Node2D"]
 
 [node name="Eye_0" type="Sprite" parent="."]
 position = Vector2( 0, 18 )
