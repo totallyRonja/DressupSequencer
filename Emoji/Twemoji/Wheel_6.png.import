@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Voltage_4.png-35da384edcea8d3f271ac92bdab0489e.stex"
+path="res://.import/Wheel_6.png-1136a70d259be932d129f52f2f93e057.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Emoji/Twemoji/Voltage_4.png"
-dest_files=[ "res://.import/Voltage_4.png-35da384edcea8d3f271ac92bdab0489e.stex" ]
+source_file="res://Emoji/Twemoji/Wheel_6.png"
+dest_files=[ "res://.import/Wheel_6.png-1136a70d259be932d129f52f2f93e057.stex" ]
 
 [params]
 

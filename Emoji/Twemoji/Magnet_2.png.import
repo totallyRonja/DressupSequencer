@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stop_8.png-acc98fd012e22b0d5f2a36e25cc3d3d8.stex"
+path="res://.import/Magnet_2.png-e1e61499f97b5e573f9b81cc701ffe5c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Emoji/Twemoji/Stop_8.png"
-dest_files=[ "res://.import/Stop_8.png-acc98fd012e22b0d5f2a36e25cc3d3d8.stex" ]
+source_file="res://Emoji/Twemoji/Magnet_2.png"
+dest_files=[ "res://.import/Magnet_2.png-e1e61499f97b5e573f9b81cc701ffe5c.stex" ]
 
 [params]
 

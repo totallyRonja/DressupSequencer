@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Emoji/Twemoji/Wheel_6.png" type="Texture" id=1]
+[ext_resource path="res://AttachPoint.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AttachPoint" parent="." instance=ExtResource( 2 )]
+position = Vector2( 90, 12.5 )
+
+[node name="AttachPoint2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -90, 12.5 )
+
+[node name="AttachPoint3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -70, -50 )
+
+[node name="AttachPoint4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 70, -50 )
+
+[node name="AttachPoint5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 70, 70 )
+
+[node name="AttachPoint6" parent="." instance=ExtResource( 2 )]
+position = Vector2( -70, 70 )
+
+[node name="Wheel_6" type="Sprite" parent="."]
+position = Vector2( 0, 15 )
+texture = ExtResource( 1 )

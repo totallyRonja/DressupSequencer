@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Emoji/Twemoji/Sparkle_0.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+rotation = 1.74533
+
+[node name="Sparkle_0" type="Sprite" parent="."]
+position = Vector2( -17.3087, 0.454741 )
+texture = ExtResource( 1 )
