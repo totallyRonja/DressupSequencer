@@ -14,5 +14,3 @@ position = Vector2( 534.318, 316.998 )
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 319.741, 176.124 )
-
-[editable path="Root"]

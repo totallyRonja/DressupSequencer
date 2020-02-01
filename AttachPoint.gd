@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 func set_child(newChild: Node2D):
-	assert(newChild == null)
+	assert(newChild != null)
 	child = newChild
 	AttachmentManager.unregister(self)
 
