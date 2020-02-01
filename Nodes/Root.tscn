@@ -1,19 +1,25 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://AttachPoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Emoji/Heart.tres" type="Texture" id=2]
 [ext_resource path="res://Behaviours/Pulse.gd" type="Script" id=3]
+[ext_resource path="res://Music/Heart.ogg" type="AudioStream" id=4]
 
 [sub_resource type="Curve" id=1]
 min_value = 1.0
 max_value = 1.5
-_data = [ Vector2( 0, 1 ), 0.0, 5.31169, 0, 0, Vector2( 0.251834, 1.5 ), 0.0, 0.0, 0, 0, Vector2( 0.650367, 1.10909 ), -0.684928, -0.684928, 0, 0, Vector2( 1, 1 ), 0.0826267, 0.0, 0, 0 ]
+_data = [ Vector2( 0, 1 ), 0.0, 22.0841, 0, 0, Vector2( 0.0759494, 1.5 ), 0.0, 0.0, 0, 0, Vector2( 0.219409, 1.23182 ), -0.0673295, -0.0673295, 0, 0, Vector2( 0.350211, 1.39091 ), 0.0, 0.0, 0, 0, Vector2( 0.620253, 1.11364 ), -0.729766, -0.729766, 0, 0, Vector2( 1, 1 ), 0.0826267, 0.0, 0, 0 ]
 
-[sub_resource type="AudioStreamRandomPitch" id=2]
+[sub_resource type="CircleShape2D" id=2]
+radius = 31.1147
 
 [node name="Root" type="Node2D"]
 position = Vector2( 524.006, 287.274 )
 script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "the heart of the operation"
+}
+bpm = 30
 pulseCurve = SubResource( 1 )
 
 [node name="AttachPoint" parent="." instance=ExtResource( 1 )]
@@ -31,6 +37,11 @@ position = Vector2( -0.5191, -36.5 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource( 2 )
-autoplay = true
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.519104, -3.58487 )
+shape = SubResource( 2 )
