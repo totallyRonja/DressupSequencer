@@ -1,0 +1,23 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="DressupSequencer"
+run/main_scene="res://Nodes/Root.tscn"
+
+[rendering]
+
+environment/default_clear_color=Color( 0.333333, 0.317647, 0.666667, 1 )
