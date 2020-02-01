@@ -30,7 +30,12 @@ func _input(event: InputEvent):
 			global_position = event.position + drag_offset
 			if has_input:
 				nearest_attach = \
-				AttachmentManager.get_closest(global_position, self, 100)
+					AttachmentManager.get_closest(\
+						global_position, self, 100)
+				if nearest_attach != null:
+					var diff: Vector2 = global_position - nearest_attach.global_position
+					global_rotation = atan2(diff.x, -diff.y)
+					
 			update()
 			get_tree().set_input_as_handled()
 
