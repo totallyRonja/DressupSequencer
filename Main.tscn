@@ -4,7 +4,8 @@
 
 [node name="Main" type="Node"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 316.998 ]
+"_edit_horizontal_guides_": [ 316.998 ],
+"_edit_vertical_guides_": [ 533.799 ]
 }
 
 [node name="Root" parent="." instance=ExtResource( 1 )]
