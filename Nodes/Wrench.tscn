@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Emoji/Twemoji/Clamp_2.png" type="Texture" id=1]
+[ext_resource path="res://AttachPoint.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AttachPoint2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 85, 200 )
+
+[node name="AttachPoint" parent="." instance=ExtResource( 2 )]
+position = Vector2( -85, 200 )
+
+[node name="Clamp_2" type="Sprite" parent="."]
+position = Vector2( -40.5247, 63.9113 )
+texture = ExtResource( 1 )
