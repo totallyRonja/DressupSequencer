@@ -44,7 +44,7 @@ func _on_Area2D_input_event(_viewport, event: InputEvent, _shape_idx):
 		if !moving && is_dragging:
 			drag_offset = global_position - event.position
 			if get_parent().has_method("loose_child"):
-					get_parent().loose_child()
+				get_parent().loose_child()
 			reparent(get_tree().root)
 		moving = is_dragging
 		

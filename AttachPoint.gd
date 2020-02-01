@@ -15,8 +15,9 @@ func set_child(newChild: Node2D):
 func loose_child(assertHasChild: bool = true):
 	if(assertHasChild):
 		assert(child != null)
+	child = null
 	AttachmentManager.register(self)
 
 func pulse():
-	if child != null && child.has_method("child"):
+	if child != null && child.has_method("pulse"):
 		child.pulse()
