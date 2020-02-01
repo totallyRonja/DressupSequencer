@@ -19,12 +19,14 @@ func _process(_delta):
 func _draw():
 	if nearest_attach != null:
 		var from = Vector2(0, 0)
-		var to = global_transform.xform_inv(nearest_attach.global_position) / (scale * scale)
+		var to = global_transform.xform_inv(nearest_attach.global_position) / \
+				(global_scale * global_scale)
 		draw_line(from, to, Color.aqua)
 		
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		if !(event.button_mask & BUTTON_MASK_LEFT):
+			attach(nearest_attach)
 			moving = false
 		if moving:
 			global_position = event.position + drag_offset
@@ -43,18 +45,31 @@ func _on_Area2D_input_event(_viewport, event: InputEvent, _shape_idx):
 	if event is InputEventMouseButton:
 		var is_dragging = event.is_pressed() && event.button_mask & BUTTON_MASK_LEFT
 		if moving && !is_dragging:
-			if nearest_attach != null:
-				reparent(nearest_attach)
-				nearest_attach.set_child(self)
+			attach(nearest_attach)
 		if !moving && is_dragging:
+			detatch()
 			drag_offset = global_position - event.position
-			if get_parent().has_method("loose_child"):
-				get_parent().loose_child()
-			reparent(get_tree().root)
 		moving = is_dragging
 		
 		update()
 		get_tree().set_input_as_handled()
+
+func attach(attach_point: AttachPoint):
+	if attach_point != null:
+		reparent(attach_point)
+		attach_point.set_child(self)
+		for node in get_children():
+			if node.has_method("set_active"):
+				node.set_active(true)
+
+func detatch():
+	for node in get_children():
+		if node.has_method("set_active"):
+			node.set_active(false)
+	if get_parent().has_method("loose_child"):
+		get_parent().loose_child()
+	reparent(get_tree().root)
+	
 
 func reparent(parent: Node):
 	var trans = global_transform
