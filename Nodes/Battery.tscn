@@ -4,10 +4,11 @@
 [ext_resource path="res://SoundNode.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 96.1281
-height = 108.497
+radius = 86.0217
+height = 90.6555
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 2 )
 
 [node name="Battery_0" type="Sprite" parent="."]

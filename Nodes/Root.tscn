@@ -19,6 +19,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": "the heart of the operation"
 }
+has_input = false
 bpm = 30
 pulseCurve = SubResource( 1 )
 
@@ -45,3 +46,4 @@ stream = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -0.519104, -3.58487 )
 shape = SubResource( 2 )
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]

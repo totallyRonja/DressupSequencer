@@ -15,10 +15,12 @@ func register(soundNode: Node2D):
 func unregister(soundNode: Node2D):
 	AvailablePoints.erase(soundNode)
 	
-func get_closest(point: Vector2, maxDist: float = 10000.0) -> Node2D:
+func get_closest(point: Vector2, ignore_node:Node2D = null, maxDist: float = 10000.0) -> Node2D:
 	var leastDistance : float = maxDist
 	var closest: Node2D
 	for node in AvailablePoints:
+		if ignore_node.is_a_parent_of(node):
+			continue
 		var dist : float = (point - node.global_position).length()
 		if dist < leastDistance:
 			leastDistance = dist

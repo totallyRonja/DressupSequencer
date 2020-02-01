@@ -1,4 +1,4 @@
-extends "res://SoundNode.gd"
+extends SoundNode
 
 export var bpm = 60
 export var pulseCurve : Curve
@@ -24,6 +24,10 @@ func _process(delta):
 		pulseState = pulseState.resume(delta)
 
 func pulse():
+	for node in get_children():
+		if node.has_method("pulse"):
+			node.pulse()
+	
 	var time: float = 0
 	$Sound.play()
 	while time < 1:

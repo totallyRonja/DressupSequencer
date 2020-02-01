@@ -1,4 +1,5 @@
 extends Node2D
+class_name AttachPoint
 
 var child: Node2D
 
@@ -15,3 +16,7 @@ func loose_child(assertHasChild: bool = true):
 	if(assertHasChild):
 		assert(child != null)
 	AttachmentManager.register(self)
+
+func pulse():
+	if child != null && child.has_method("child"):
+		child.pulse()
