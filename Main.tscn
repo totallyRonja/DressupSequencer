@@ -38,18 +38,6 @@ position = Vector2( 940.281, 0 )
 [node name="Root" parent="." instance=ExtResource( 1 )]
 position = Vector2( 534.318, 316.998 )
 
-[node name="Battery" parent="." instance=ExtResource( 2 )]
-position = Vector2( 367.651, 206.68 )
-
-[node name="Battery2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 263.538, 280.498 )
-
-[node name="LightningBolt" parent="." instance=ExtResource( 3 )]
-position = Vector2( 751.57, 316.998 )
-
-[node name="LightningBolt2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 657.217, 206.68 )
-
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2( 940.281, -200 )
 script = ExtResource( 5 )
