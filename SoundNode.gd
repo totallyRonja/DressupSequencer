@@ -17,6 +17,8 @@ func _ready():
 func _process(delta):
 	if !moving && on_belt:
 		global_position.y += delta * ConveyorBelt.move_speed
+	if global_position.y > 1000:
+		queue_free()
 
 func _draw():
 	if nearest_attach != null:
