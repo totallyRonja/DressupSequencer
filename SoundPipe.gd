@@ -19,6 +19,7 @@ func _process(delta):
 func pulse():
 	$Sound.play()
 	forward_sound()
+# warning-ignore:function_may_yield
 	state = scalePulse()
 	
 func forward_sound():

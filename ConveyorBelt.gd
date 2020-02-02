@@ -1,7 +1,7 @@
 extends Node2D
 class_name ConveyorBelt
 
-const move_speed = 50
+const move_speed = 170
 export var tile_size = 156
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
