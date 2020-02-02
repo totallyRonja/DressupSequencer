@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Emoji/Twemoji/Comet_0.png" type="Texture" id=1]
+[ext_resource path="res://Music/Tracks/Comet.ogg" type="AudioStream" id=2]
+[ext_resource path="res://SimpleSound.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 102.061
 height = 273.14
 
 [node name="Comet" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Comet_0" type="Sprite" parent="."]
 position = Vector2( 82.5414, -97.8327 )
@@ -18,3 +21,6 @@ texture = ExtResource( 1 )
 position = Vector2( 79.1139, -119.55 )
 rotation = 0.6353
 shape = SubResource( 1 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
