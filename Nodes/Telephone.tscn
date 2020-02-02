@@ -8,17 +8,19 @@
 extents = Vector2( 203.85, 71.9606 )
 
 [node name="Phone" type="Node2D"]
+scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 3 )
 
 [node name="Telephone_0" type="Sprite" parent="."]
-position = Vector2( 0, 75 )
+position = Vector2( 0, 38.8431 )
 rotation = -3.92699
 texture = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 0, -38.4897 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 53 )
+position = Vector2( 0, 54.1664 )
 shape = SubResource( 1 )
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]

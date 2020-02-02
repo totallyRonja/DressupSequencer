@@ -9,7 +9,11 @@ radius = 102.061
 height = 273.14
 
 [node name="Comet" type="Node2D"]
+scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -90.5516 ]
+}
 
 [node name="Comet_0" type="Sprite" parent="."]
 position = Vector2( 82.5414, -97.8327 )

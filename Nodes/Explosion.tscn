@@ -8,7 +8,11 @@
 radius = 186.362
 
 [node name="Explosion" type="Node2D"]
+scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -55.714 ]
+}
 
 [node name="Collision_0" type="Sprite" parent="."]
 position = Vector2( -19.4277, 19.9591 )

@@ -4,28 +4,30 @@
 [ext_resource path="res://AttachPoint.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 126.494
-height = 65.744
+radius = 112.855
+height = 90.5243
 
 [node name="Diamond" type="Node2D"]
-
-[node name="AttachPoint" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, 150 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -131.399 ]
+}
 
 [node name="AttachPoint2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, -150 )
+position = Vector2( 0, -310 )
 
 [node name="AttachPoint3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 110, 0 )
+position = Vector2( 114.081, -150 )
 
 [node name="AttachPoint4" parent="." instance=ExtResource( 2 )]
-position = Vector2( -110, 0 )
+position = Vector2( -114.081, -150 )
 
 [node name="Diamond_4" type="Sprite" parent="."]
+position = Vector2( -1.90735e-06, -150 )
 texture = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -1.90735e-06, -3.51614 )
+position = Vector2( 0, -150 )
 shape = SubResource( 1 )

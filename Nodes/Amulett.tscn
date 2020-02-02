@@ -10,6 +10,9 @@ radius = 172.371
 [node name="Amulett" type="Node2D"]
 scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -65.106 ]
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -165.53 )
