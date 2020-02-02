@@ -3,19 +3,21 @@ class_name SoundNode
 
 export var has_input = true
 
+var on_belt = false
 var moving: bool = false
 var nearest_attach: AttachPoint
 var drag_offset: Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if !$Area2D.is_connected("input_event", self, "_on_Area2D_input_event"):
+# warning-ignore:return_value_discarded
+		$Area2D.connect("input_event", self, "_on_Area2D_input_event")
 
+func _process(delta):
+	if !moving && on_belt:
+		global_position.y += delta * ConveyorBelt.move_speed
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-		
 func _draw():
 	if nearest_attach != null:
 		var from = Vector2(0, 0)
@@ -25,19 +27,23 @@ func _draw():
 		
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
-		if !(event.button_mask & BUTTON_MASK_LEFT):
+		if !(event.button_mask & BUTTON_MASK_LEFT) && moving:
+			global_position = event.position + drag_offset
 			attach(nearest_attach)
 			moving = false
 		if moving:
 			global_position = event.position + drag_offset
-			if has_input:
+			on_belt = global_position.x > 860 && has_input
+			if has_input && !on_belt:
 				nearest_attach = \
 					AttachmentManager.get_closest(\
 						global_position, self, 100)
 				if nearest_attach != null:
 					var diff: Vector2 = global_position - nearest_attach.global_position
 					global_rotation = atan2(diff.x, -diff.y)
-					
+			else:
+				nearest_attach = null
+				
 			update()
 			get_tree().set_input_as_handled()
 

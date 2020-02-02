@@ -1,17 +1,15 @@
 extends Node2D
+class_name ConveyorBelt
 
-class_name BeltMover
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-export var pixelsPerSecond = 200;
-# Called when the node enters the scene tree for the first time.
+const move_speed = 50
+export var tile_size = 156
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	for child in get_children():
-		child.position += Vector2(0,pixelsPerSecond * delta);
-		if child.global_position.y > 780:
-			child.position = Vector2(0,-100)
+	$Mover.position.y += move_speed * delta
+	var first_child: Node2D = $Mover.get_child(0)
+	while first_child.global_position.y - tile_size/2 >= 0:
+		var last: Sprite = $Mover.get_child($Mover.get_child_count()-1)
+		$Mover.move_child(last, 0)
+		last.position.y = first_child.position.y - tile_size
+		first_child = last

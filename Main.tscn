@@ -8,12 +8,11 @@
 [node name="Main" type="Node"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 316.998 ],
-"_edit_vertical_guides_": [ 533.799 ]
+"_edit_vertical_guides_": [ 860.281 ]
 }
 
 [node name="ConveyorBelt" parent="." instance=ExtResource( 4 )]
-position = Vector2( 900, 0 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 940.281, 0 )
 
 [node name="Root" parent="." instance=ExtResource( 1 )]
 position = Vector2( 534.318, 316.998 )
@@ -29,5 +28,3 @@ position = Vector2( 751.57, 316.998 )
 
 [node name="LightningBolt2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 657.217, 206.68 )
-
-[editable path="ConveyorBelt"]
