@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Antenna.ogg-547a0d7e543e2b78c7acf7bd8f02db7b.oggstr"
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

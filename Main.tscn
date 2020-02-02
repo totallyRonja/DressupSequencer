@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Nodes/Root.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Nodes/Battery.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Nodes/Lightning.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ConveyorBelt.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Nodes/Amulett.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Nodes/Antenna.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Nodes/Comet.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Nodes/Explosion.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Nodes/Telephone.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Nodes/Head.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Nodes/Gear.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Node"]
 __meta__ = {
@@ -14,17 +21,44 @@ __meta__ = {
 [node name="ConveyorBelt" parent="." instance=ExtResource( 4 )]
 position = Vector2( 940.281, 0 )
 
+[node name="Comet" parent="." instance=ExtResource( 7 )]
+position = Vector2( 359.975, 465.57 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Explosion" parent="." instance=ExtResource( 8 )]
+position = Vector2( 628.874, 400.433 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Antenna" parent="." instance=ExtResource( 6 )]
+position = Vector2( 111.569, 421.529 )
+scale = Vector2( 0.3, 0.3 )
+
 [node name="Root" parent="." instance=ExtResource( 1 )]
 position = Vector2( 534.318, 316.998 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="Battery" parent="." instance=ExtResource( 2 )]
 position = Vector2( 367.651, 206.68 )
-
-[node name="Battery2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 263.538, 280.498 )
 
 [node name="LightningBolt" parent="." instance=ExtResource( 3 )]
 position = Vector2( 751.57, 316.998 )
 
 [node name="LightningBolt2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 657.217, 206.68 )
+
+[node name="Amulett" parent="." instance=ExtResource( 5 )]
+position = Vector2( 141.965, 145.643 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Phone" parent="." instance=ExtResource( 9 )]
+position = Vector2( 106.891, 30.0632 )
+rotation = 0.392699
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Gear" parent="." instance=ExtResource( 11 )]
+position = Vector2( 298.178, 331.956 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Robot" parent="." instance=ExtResource( 10 )]
+position = Vector2( 514.415, 146.976 )
+scale = Vector2( 0.3, 0.3 )

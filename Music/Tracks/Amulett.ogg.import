@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Amulett.ogg-ad24517e8bce9977cdd11e973682e338.oggstr"
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Comet.ogg-968f8133666595acbbb3de2a74e5fb50.oggstr" ]
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

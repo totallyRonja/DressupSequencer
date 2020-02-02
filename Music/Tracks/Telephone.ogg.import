@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Telephone.ogg-3b9b71ae9779961d3589ba1d7751efe1.oggst
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
