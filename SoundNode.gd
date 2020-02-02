@@ -63,6 +63,8 @@ func attach(attach_point: AttachPoint):
 				node.set_active(true)
 
 func detatch():
+	if !has_input:
+		return
 	for node in get_children():
 		if node.has_method("set_active"):
 			node.set_active(false)
