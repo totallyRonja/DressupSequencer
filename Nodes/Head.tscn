@@ -9,6 +9,7 @@
 extents = Vector2( 177.478, 164.077 )
 
 [node name="Robot" type="Node2D"]
+scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
