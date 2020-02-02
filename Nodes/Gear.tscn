@@ -10,6 +10,7 @@ radius = 194.253
 
 [node name="Gear" type="Node2D"]
 rotation = 0.392699
+scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 3 )
 
 [node name="AttachPoint" parent="." instance=ExtResource( 2 )]

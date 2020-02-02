@@ -13,6 +13,7 @@ func pulse():
 func forward_sound():
 	$Timer.start()
 	yield($Timer, "timeout")
+	$Timer.stop()
 	# pulse all attachpoints
 	for node in get_children():
 		if node.has_method("pulse"):
