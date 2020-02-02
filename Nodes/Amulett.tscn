@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 172.371
 
-[node name="Node2D" type="Node2D"]
+[node name="Amulett" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

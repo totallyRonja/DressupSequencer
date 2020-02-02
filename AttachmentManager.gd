@@ -1,9 +1,7 @@
 extends Node
 
-
 # Declare member variables here. Examples:
 var AvailablePoints: Array = []
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +12,7 @@ func register(soundNode: Node2D):
 	
 func unregister(soundNode: Node2D):
 	AvailablePoints.erase(soundNode)
-	
+
 func get_closest(point: Vector2, ignore_node:Node2D = null, maxDist: float = 10000.0) -> Node2D:
 	var leastDistance : float = maxDist
 	var closest: Node2D

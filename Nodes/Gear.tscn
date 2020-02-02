@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 194.253
 
-[node name="Node2D" type="Node2D"]
+[node name="Gear" type="Node2D"]
 rotation = 0.392699
 
 [node name="AttachPoint" parent="." instance=ExtResource( 2 )]

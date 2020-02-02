@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 175.308
 
-[node name="Node2D" type="Node2D"]
+[node name="Fire" type="Node2D"]
 
 [node name="Fire_0" type="Sprite" parent="."]
 position = Vector2( 0, -100 )

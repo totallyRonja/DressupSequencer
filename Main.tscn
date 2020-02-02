@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Nodes/Root.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Nodes/Battery.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ConveyorBelt.tscn" type="PackedScene" id=3]
-[ext_resource path="res://ConveyorBelt.gd" type="Script" id=4]
+[ext_resource path="res://Nodes/Lightning.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node"]
 __meta__ = {
@@ -11,17 +10,17 @@ __meta__ = {
 "_edit_vertical_guides_": [ 533.799 ]
 }
 
-[node name="ConveyorBelt" parent="." instance=ExtResource( 3 )]
-position = Vector2( 942.831, 225.829 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 4 )
-
 [node name="Root" parent="." instance=ExtResource( 1 )]
 position = Vector2( 534.318, 316.998 )
 
-[node name="Node2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 319.741, 176.124 )
+[node name="Battery" parent="." instance=ExtResource( 2 )]
+position = Vector2( 367.651, 206.68 )
 
-[editable path="ConveyorBelt"]
+[node name="Battery2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 263.538, 280.498 )
 
-[editable path="Root"]
+[node name="LightningBolt" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.57, 316.998 )
+
+[node name="LightningBolt2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 657.217, 206.68 )

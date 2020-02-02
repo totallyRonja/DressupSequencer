@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 147.219, 167.139 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Vise" type="Node2D"]
 
 [node name="AttachPoint2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 85, 200 )

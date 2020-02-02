@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 87.7628, 199.772 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Screw" type="Node2D"]
 
 [node name="Nut_Bolt_1" type="Sprite" parent="."]
 position = Vector2( 100, 100 )
